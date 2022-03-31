@@ -11,16 +11,19 @@ class LinkedList:
     def __init__(self, value):
         self.head = Node(value, None)
         self.tail = self.head
+        self.length = 1
 
     # Time complexity = O(1)
     def prepend(self, value):
         """insert at index 0"""
         self.head = Node(value, self.head)
+        self.length += 1
 
     # Time complexity = O(1)
     def append(self, value):
         self.tail.next = Node(value, None)
         self.tail = self.tail.next
+        self.length += 1
 
     # Time complexity = O(n)
     def insert(self, index, value):
@@ -31,6 +34,7 @@ class LinkedList:
             i += 1
         new_node = Node(value, current.next)
         current.next = new_node
+        self.length += 1
 
     # Time complexity = O(n)
     def delete(self, index):
@@ -42,11 +46,11 @@ class LinkedList:
         to_delete = current.next
         current.next = current.next.next
         del to_delete
+        self.length -= 1
 
     # Time complexity = O(n) | (just for visulization)
     def print_linked_list(self):
-        print("Head: " + str(self.head.value))
-        print("Tail: " + str(self.tail.value))
+        print("Head:",self.head.value, "|","Tail:",self.tail.value)
         current = self.head
         while current != None:
             print(current.value, "--> ", end="")
