@@ -65,6 +65,8 @@ class HashTable:
         return keys_array
 
 
+# --- Comment these out --- #
+
 # # Creating hash table
 # hash_table = HashTable(25)
 #
