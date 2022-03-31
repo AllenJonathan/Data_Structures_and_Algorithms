@@ -55,6 +55,9 @@ class Array:
             print(self.data[i],end=",")
         print("]")
 
+
+# --- Comment these out --- #
+
 # # Creating array
 # array_1 = Array()
 #
