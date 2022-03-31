@@ -2,6 +2,7 @@
 
 # Time Complexity = O(a+b) --> a and b are the sorted arrays
 def merge_sorted_arrays(array_1,array_2):
+    """merge two sorted arrays to one sorted array"""
     merged_array = []
     i = 0
     j = 0

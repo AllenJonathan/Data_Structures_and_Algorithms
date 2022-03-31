@@ -1,10 +1,10 @@
 class HashTable:
 
-    # Time complextiy of creating self.data = O(size) (or) O(n)
+    # Time complextiy of creating self.data = O(size) (or) O(n) | not important
     def __init__(self, size):
         self.data = [None]*size
 
-    # Hash Function - "_" before means it should be used directly
+    # Hash Function - "_" before means it shouldn't be used directly
     # Time comolexity -> O(1) ideally | but here depends on length of word -> O(a)
     def _hash(self, key):
         """ Hash Function"""
@@ -53,6 +53,8 @@ class HashTable:
         print('}')
         print(self.data)
 
+    # Time complexity -> O(n) (if not collisions)
+    # (or) Time complexity -> O(n + k) (where k is items in bucket) -> O(n)
     def keys(self):
         """ Return an array of all the keys in the hashtable"""
         keys_array = []
@@ -63,26 +65,26 @@ class HashTable:
         return keys_array
 
 
-# Creating hash table
-hash_table = HashTable(25)
-
-# Storing items (key,value) to memory
-hash_table.set('grapes', 100)
-hash_table.set('apples', 12)
-hash_table.set('mangos', 1234)
-hash_table.set('guava', 1003)
-hash_table.set('oranges', 67)
-hash_table.set('bananas', 77)
-hash_table.set('brocolli', 776)
-hash_table.set('berries', 200)
-
-# printing hash table
-hash_table.print_hashtable()
-
-# Extracting value from hashtable
-value = hash_table.get('grapes')
-print(value)
-
-# Return keys array
-keys = hash_table.keys()
-print(keys)
+# # Creating hash table
+# hash_table = HashTable(25)
+#
+# # Storing items (key,value) to memory
+# hash_table.set('grapes', 100)
+# hash_table.set('apples', 12)
+# hash_table.set('mangos', 1234)
+# hash_table.set('guava', 1003)
+# hash_table.set('oranges', 67)
+# hash_table.set('bananas', 77)
+# hash_table.set('brocolli', 776)
+# hash_table.set('berries', 200)
+#
+# # printing hash table
+# hash_table.print_hashtable()
+#
+# # Extracting value from hashtable
+# value = hash_table.get('grapes')
+# print(value)
+#
+# # Return keys array
+# keys = hash_table.keys()
+# print(keys)

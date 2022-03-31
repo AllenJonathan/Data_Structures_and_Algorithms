@@ -53,19 +53,30 @@ class LinkedList:
             current = current.next
         print(None)
 
-    # def delete(self, index):
 
+# --- Comment these out --- #
 
-linked_list = LinkedList(10)
-linked_list.prepend(15)
-linked_list.prepend(20)
-linked_list.prepend(25)
-linked_list.prepend(45)
-linked_list.append(1)
-linked_list.append(2)
-linked_list.append(3)
-linked_list.print_linked_list()
-linked_list.insert(2,100)
-linked_list.print_linked_list()
-linked_list.delete(2)
-linked_list.print_linked_list()
+# # Creating new linked list
+# linked_list = LinkedList(10)
+#
+# # Prepending items
+# linked_list.prepend(15)
+# linked_list.prepend(20)
+# linked_list.prepend(25)
+# linked_list.prepend(45)
+#
+# # Appending items
+# linked_list.append(1)
+# linked_list.append(2)
+# linked_list.append(3)
+#
+# # Printing linked list
+# linked_list.print_linked_list()
+#
+# # Insert
+# linked_list.insert(2,100)
+# linked_list.print_linked_list()
+#
+# # Delete
+# linked_list.delete(2)
+# linked_list.print_linked_list()
