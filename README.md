@@ -5,3 +5,4 @@ Implementation and solutions of simple problems of popular data structures and a
 - Arrays
 - Hash Tables
 - Linked Lists
+- Stacks
