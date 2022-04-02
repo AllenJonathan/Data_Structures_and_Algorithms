@@ -8,22 +8,35 @@ class Node:
 class LinkedList:
     """Singly Linked List Implementation"""
 
-    def __init__(self, value):
+    def __init__(self):
+        self.head = None
+        self.tail = None
+        self.length = 0
+
+    def _create_first_node(self, value):
         self.head = Node(value, None)
         self.tail = self.head
-        self.length = 1
 
     # Time complexity = O(1)
     def prepend(self, value):
         """insert item at index 0"""
-        self.head = Node(value, self.head)
+        # for first item only
+        if self.length == 0:
+            self._create_first_node(value)
+        else:
+            self.head = Node(value, self.head)
         self.length += 1
 
     # Time complexity = O(1)
     def append(self, value):
         """insert item to end of linked list"""
-        self.tail.next = Node(value, None)
-        self.tail = self.tail.next
+        new_node = Node(value, None)
+        # for first item only
+        if self.length == 0:
+            self._create_first_node(value)
+        else:
+            self.tail.next = Node(value, None)
+            self.tail = self.tail.next
         self.length += 1
 
     # Used in insert and delete to travese to index
@@ -39,22 +52,34 @@ class LinkedList:
     # Time complexity = O(n)
     def insert(self, index, value):
         """insert item to given index"""
-        # if index out of bounds -> append instead of insert (optional)
-        if index >= self.length:
+        # --- checking cornor cases ---
+        if index < 0 or index > self.length:
+            raise IndexError("Index out of range.")
+        elif index == self.length:
             self.append(value)
+        elif index == 0:
+            self.prepend(value)
         else:
             current = self._traverse_to_index(index)
             new_node = Node(value, current.next)
             current.next = new_node
-            self.length += 1
+        self.length += 1
 
     # Time complexity = O(n)
     def delete(self, index):
         """delete item at given index"""
-        current = self._traverse_to_index(index)
-        unwanted_node = current.next
-        current.next = unwanted_node.next
-        del unwanted_node
+        # --- checking cornor cases ---
+        if index < 0 or index >= self.length:
+            raise IndexError("Index out of range.")
+        elif index == 0:
+            unwanted_node = self.head
+            self.head = self.head.next
+            del unwanted_node
+        else:
+            current = self._traverse_to_index(index)
+            unwanted_node = current.next
+            current.next = unwanted_node.next
+            del unwanted_node
         self.length -= 1
 
     # Time complexity = O(n) | (just for visulization)
@@ -86,8 +111,8 @@ class LinkedList:
 # --- Comment these out --- #
 
 # # Creating new linked list
-# linked_list = LinkedList(10)
-#
+# linked_list = LinkedList()
+# 
 # # Prepending items
 # linked_list.prepend(15)
 # linked_list.prepend(20)
@@ -104,14 +129,14 @@ class LinkedList:
 #
 # # Insert
 # linked_list.insert(2,100)
-# linked_list.insert(100,5)
+# linked_list.insert(0,5)
 # linked_list.print()
 #
 # # Delete
 # linked_list.delete(2)
+# linked_list.delete(0)
 # linked_list.print()
 #
 # # Reverse
-# linked_list.print()
 # linked_list.reverse()
 # linked_list.print()
