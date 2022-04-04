@@ -28,7 +28,7 @@ class HashTable:
     # Time complexity -> O(1) (if no collision)
     def get(self,key):
         """
-        - Hashes the to get the address
+        - Hashes the key to get the address
         - Return None if bucket doesn't exist
         - If bucket exists then loop through the bucket to find the
           item -> [key,value]
