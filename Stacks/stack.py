@@ -5,8 +5,9 @@ class Node:
         self.value = value
         self.next = next
 
+
 class Stack:
-    """Implementation of stack"""
+    """Implementation of stack using modified Linked List"""
 
     def __init__(self):
         self.top = None
@@ -16,7 +17,7 @@ class Stack:
     # Time complexity = O(1)
     def peek(self):
         """Return the top most node"""
-        return self.top
+        return self.top.value
 
     # Time complexity = O(1)
     def push(self, value):
@@ -35,25 +36,30 @@ class Stack:
     # Time complexity = O(1)
     def pop(self):
         """Returns and removes topmost node"""
+        # if no items exist
         if not self.top:
             return None
-        else:
-            popped_node = self.top
-            unwanted_item = self.top
-            self.top = self.top.next
-            del unwanted_item
-            return popped_node
+        if self.top == self.bottom:
+            self.bottom = None
+        pop_node = self.top
+        self.top = pop_node.next
+        self.length -= 1
+        return pop_node.value
+
 
     # Time complexity O(n) | (just for visualization)
     def print(self):
         """Prints the stack"""
-        print("Bottom:", self.bottom.value, "| Top:", self.top.value)
         stack_string = ""
-        current = self.top
-        while current.next != None:
-            stack_string = " --> " + current.value + stack_string
-            current = current.next
-        stack_string = current.value + stack_string
+        if self.length > 0:
+            print("Bottom:", self.bottom.value, "| Top:", self.top.value)
+            current = self.top
+            while current.next != None:
+                stack_string = " <-- " + current.value + stack_string
+                current = current.next
+            stack_string = current.value + stack_string
+        else:
+            stack_string = "Stack is empty..."
         print(stack_string)
 
 
@@ -72,13 +78,12 @@ class Stack:
 #
 # # Peek
 # topmost_item = my_stack.peek()
-# print(topmost_item.value)
+# print(topmost_item)
 #
 # # Pop
 # popped_items = []
-# popped_items.append(my_stack.pop().value)
-# popped_items.append(my_stack.pop().value)
-# popped_items.append(my_stack.pop().value)
+# popped_items.append(my_stack.pop())
+# popped_items.append(my_stack.pop())
 # print(popped_items)
 #
 # # Printing Stack

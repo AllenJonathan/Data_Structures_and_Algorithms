@@ -116,30 +116,30 @@ class LinkedList:
 
 # --- Comment these out --- #
 
-# Creating new linked list
-linked_list = LinkedList()
-
-# Prepending items
-linked_list.prepend(15)
-linked_list.prepend(20)
-linked_list.prepend(25)
-linked_list.prepend(45)
-
-# Appending items
-linked_list.append(1)
-linked_list.append(2)
-linked_list.append(3)
-
-# Printing linked list
-linked_list.print()
-
-# Insert
-linked_list.insert(2,100)
-linked_list.insert(4,5)
-linked_list.print()
-
-# Delete
-linked_list.delete(2)
-linked_list.delete(0)
-linked_list.delete(6)
-linked_list.print()
+# # Creating new linked list
+# linked_list = LinkedList()
+# 
+# # Prepending items
+# linked_list.prepend(15)
+# linked_list.prepend(20)
+# linked_list.prepend(25)
+# linked_list.prepend(45)
+#
+# # Appending items
+# linked_list.append(1)
+# linked_list.append(2)
+# linked_list.append(3)
+#
+# # Printing linked list
+# linked_list.print()
+#
+# # Insert
+# linked_list.insert(2,100)
+# linked_list.insert(4,5)
+# linked_list.print()
+#
+# # Delete
+# linked_list.delete(2)
+# linked_list.delete(0)
+# linked_list.delete(6)
+# linked_list.print()

@@ -112,7 +112,7 @@ class LinkedList:
 
 # # Creating new linked list
 # linked_list = LinkedList()
-# 
+#
 # # Prepending items
 # linked_list.prepend(15)
 # linked_list.prepend(20)
