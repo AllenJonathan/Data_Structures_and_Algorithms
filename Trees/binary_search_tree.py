@@ -129,7 +129,7 @@ class BinarySeachTree():
                     while replace.left:
                         replace_parent = replace
                         replace = replace.left
-                    # parent of replacng node left node to replacing node's right node
+                    # replacng parent node's left node to replacing node's right node
                     replace_parent.left = replace.right
                     # replace removed node
                     replace.left = current_node.left
@@ -141,8 +141,8 @@ class BinarySeachTree():
                         parent_node.left = replace
                     elif replace.value > parent_node.value:
                         parent_node.right = replace
-                return "Done"
-
+                return "Removed " + str(value)
+        return "Node " + str(value) + " Not Found"
 
     # Time Complexity O(n)
     def print(self, current=None):
