@@ -173,6 +173,7 @@ class BinarySeachTree():
 # bst.insert(500)
 # bst.insert(14)
 #
+# # lookup
 # print(bst.lookup(1))
 # print(bst.lookup(6))
 # print(bst.lookup(15))

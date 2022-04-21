@@ -4,5 +4,7 @@ Implementation and solutions of simple problems of popular data structures and a
 ### Implemented Data Structures
 - Arrays
 - Hash Tables
-- Linked Lists
-- Stacks
+- Linked Lists - Singly linked list | Doubly linked lists
+- Queue
+- Stacks - Using Nodes | Using Array
+- Trees - Binary Search Tree | Binary Heap
