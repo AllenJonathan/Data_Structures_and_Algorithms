@@ -56,21 +56,25 @@ class MaxBinaryHeap:
             break
 
     def _switch(self,i,j):
+        """switches two nodes in the heap array"""
         self.heap[i], self.heap[j] = self.heap[j], self.heap[i]
 
     # Time Complexity O(logN)
     def extract_max(self):
+        """return the root(maximum priority) and deletes it"""
         self._switch(1,self.length) # switching first and last node
         max = self.heap.pop()
         self.length -= 1
         self._shift_down()
         return max
 
+    # Time complexity O(n) | printing a list takes linear time in python
     def print(self):
         print(self.heap)
 
     # Time Complexity O(logN)
     def delete(self, index):
+        """deletes the node present in given index"""
         # 1-based indexing
         self.heap[index] = self.heap[1] + 1
         self._shift_up(index)
