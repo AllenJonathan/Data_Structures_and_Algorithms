@@ -8,3 +8,4 @@ Implementation and solutions of simple problems of popular data structures and a
 - Queue
 - Stacks - Using Nodes | Using Array
 - Trees - Binary Search Tree | Binary Heap
+- Graphs(undirected and unweighted)
