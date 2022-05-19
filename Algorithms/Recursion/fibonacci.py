@@ -27,6 +27,7 @@ def fibo_recursive(n):
         return fibo_recursive(n-1) + fibo_recursive(n-2)
 
 
-
-print(fibo_iterative(7))
-print(fibo_recursive(7))
+# # -- Comment these out -- #
+#
+# print(fibo_iterative(7))
+# print(fibo_recursive(7))
