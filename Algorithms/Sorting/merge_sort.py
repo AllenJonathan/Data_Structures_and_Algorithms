@@ -20,13 +20,12 @@ def merge(left, right):
         else:
             merged_arr.append(right[0])
             del right[0]
-    while left or right:
-        if left:
-            merged_arr.append(left[0])
-            del left[0]
-        elif right:
-            merged_arr.append(right[0])
-            del right[0]
+    while left:
+        merged_arr.append(left[0])
+        del left[0]
+    while right:
+        merged_arr.append(right[0])
+        del right[0]
     return merged_arr
 
 
