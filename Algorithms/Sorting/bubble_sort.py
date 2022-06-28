@@ -9,6 +9,7 @@ def bubble_sort(arr):
             bubble_sort(arr)
     return arr
 
+# Iterative bubble sort
 def bubble_sort_iterative(arr):
     l = len(arr) - 1
     for i in range(l):
