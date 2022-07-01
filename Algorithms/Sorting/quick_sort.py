@@ -30,12 +30,12 @@ def swap(arr, current, pivot):
 
 # -- Comment these out -- #
 
-arr_1 = [2, 8, 5, 3, 9, 4]
-
-sorted = quick_sort(arr_1)
-print(sorted)
-
-arr_2 = [7, 4, 3, 2, 1, 9, 6, 5, 8]
-
-sorted = quick_sort(arr_2)
-print(sorted)
+# arr_1 = [2, 8, 5, 3, 9, 4]
+#
+# sorted = quick_sort(arr_1)
+# print(sorted)
+#
+# arr_2 = [7, 4, 3, 2, 1, 9, 6, 5, 8]
+#
+# sorted = quick_sort(arr_2)
+# print(sorted)
