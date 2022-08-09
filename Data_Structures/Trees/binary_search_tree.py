@@ -37,7 +37,7 @@ class Node:
         return str(self.value)
 
 
-class BinarySeachTree():
+class BinarySeachTree:
 
     def __init__(self):
         self.root = None
