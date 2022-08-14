@@ -28,22 +28,22 @@ def depth_first_search_recursive(current, list=[]):
 
 # -- Comment these out --
 
-# Inserting values to the Binary Search Tree
-bst = BinarySeachTree()
-bst.insert(9)
-bst.insert(4)
-bst.insert(6)
-bst.insert(20)
-bst.insert(170)
-bst.insert(15)
-bst.insert(1)
-bst.insert(30)
-bst.insert(500)
-bst.insert(14)
-
-# resulting binary tree
-#               9
-#        4             20
-#     1    6      15      170
-#               14       30 50
-print(depth_first_search_recursive(bst.root))
+# # Inserting values to the Binary Search Tree
+# bst = BinarySeachTree()
+# bst.insert(9)
+# bst.insert(4)
+# bst.insert(6)
+# bst.insert(20)
+# bst.insert(170)
+# bst.insert(15)
+# bst.insert(1)
+# bst.insert(30)
+# bst.insert(500)
+# bst.insert(14)
+#
+# # resulting binary tree
+# #               9
+# #        4             20
+# #     1    6      15      170
+# #               14       30 50
+# print(depth_first_search_recursive(bst.root))
