@@ -42,6 +42,13 @@ class Queue:
         del deque_node
         self.length -= 1
 
+    # Time complexity = O(1)
+    def shift(self):
+        """Removes and returns the first element in the queue"""
+        first = self.peek()
+        self.dequeue()
+        return first
+
     # Time complexity = O(n) | (just for visualization)
     def print(self):
         if self.length == 0:
