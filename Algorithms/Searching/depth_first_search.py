@@ -9,22 +9,47 @@ sys.path.append(cwd + "\data_structures")
 # Importing Binary Seach Tree which was previously implemented
 from Trees.binary_search_tree import BinarySeachTree
 
-# DepthFirstSearch - searches a tree from the up to down (downwards).
-# For example in,
+# There are 3 types if depth-first-search
+# For example in this tree,
 #                7
 #           4        15
 #         1   5    9   20
 #
-# DepthFirstSearch would go in the order [7,4,1,5,15,9,20]
+# Inorder -> [1,4,5,7,9,15,20]
+# Pre-order -> [7,4,1,5,15,9,20]
+# Post-order -> [1,5,4,9,20,15,7]
 
 
-def depth_first_search_recursive(current, list=[]):
+def depth_first_search_inorder(tree, current=None, list=[]):
+    if current is None:
+        current = tree.root
     if current.left:
-        depth_first_search_recursive(current.left, list)
+        depth_first_search_inorder(tree, current.left, list)
     list.append(current.value)
     if current.right:
-        depth_first_search_recursive(current.right, list)
+        depth_first_search_inorder(tree, current.right, list)
     return list
+
+def depth_first_search_preorder(tree, current=None, list=[]):
+    if current is None:
+        current = tree.root
+    list.append(current.value)
+    if current.left:
+        depth_first_search_preorder(tree, current.left, list)
+    if current.right:
+        depth_first_search_preorder(tree, current.right, list)
+    return list
+
+def depth_first_search_postorder(tree, current=None, list=[]):
+    if current is None:
+        current = tree.root
+    if current.left:
+        depth_first_search_postorder(tree, current.left, list)
+    if current.right:
+        depth_first_search_postorder(tree, current.right, list)
+    list.append(current.value)
+    return list
+
 
 # -- Comment these out --
 
@@ -45,5 +70,8 @@ def depth_first_search_recursive(current, list=[]):
 # #               9
 # #        4             20
 # #     1    6      15      170
-# #               14       30 50
-# print(depth_first_search_recursive(bst.root))
+# #               14       30 500
+#
+# print(depth_first_search_inorder(bst))
+# print(depth_first_search_preorder(bst))
+# print(depth_first_search_postorder(bst))

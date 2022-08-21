@@ -35,6 +35,7 @@ def breadth_first_search(tree, value):
     return False
 
 def breadth_first_search_recursive(queue, value):
+    # queue -> Queue() object with tree.root
     if queue.length <= 0:
         return False
     current_node = queue.shift()
@@ -45,8 +46,7 @@ def breadth_first_search_recursive(queue, value):
     if current_node.right:
         queue.enqueue(current_node.right)
     return breadth_first_search_recursive(queue, value)
-
-
+    
 
 # -- Comment these out --
 
