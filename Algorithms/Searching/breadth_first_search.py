@@ -46,7 +46,7 @@ def breadth_first_search_recursive(queue, value):
     if current_node.right:
         queue.enqueue(current_node.right)
     return breadth_first_search_recursive(queue, value)
-    
+
 
 # -- Comment these out --
 
