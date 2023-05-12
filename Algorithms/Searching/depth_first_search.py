@@ -1,13 +1,6 @@
-import os
-import sys
-import random
+# Importing Binary Search Tree which was previously implemented
+from data_structures.Trees.binary_search_tree import BinarySearchTree
 
-# Adds the data_structures directory to sys.path for easy importing
-cwd = os.getcwd()
-sys.path.append(cwd + "\data_structures")
-
-# Importing Binary Seach Tree which was previously implemented
-from Trees.binary_search_tree import BinarySeachTree
 
 # There are 3 types if depth-first-search
 # For example in this tree,
@@ -20,41 +13,43 @@ from Trees.binary_search_tree import BinarySeachTree
 # Post-order -> [1,5,4,9,20,15,7]
 
 
-def depth_first_search_inorder(tree, current=None, list=[]):
+def depth_first_search_inorder(tree, current=None, array=[]):
     if current is None:
         current = tree.root
     if current.left:
-        depth_first_search_inorder(tree, current.left, list)
-    list.append(current.value)
+        depth_first_search_inorder(tree, current.left, array)
+    array.append(current.value)
     if current.right:
-        depth_first_search_inorder(tree, current.right, list)
-    return list
+        depth_first_search_inorder(tree, current.right, array)
+    return array
 
-def depth_first_search_preorder(tree, current=None, list=[]):
-    if current is None:
-        current = tree.root
-    list.append(current.value)
-    if current.left:
-        depth_first_search_preorder(tree, current.left, list)
-    if current.right:
-        depth_first_search_preorder(tree, current.right, list)
-    return list
 
-def depth_first_search_postorder(tree, current=None, list=[]):
+def depth_first_search_preorder(tree, current=None, array=[]):
+    if current is None:
+        current = tree.root
+    array.append(current.value)
+    if current.left:
+        depth_first_search_preorder(tree, current.left, array)
+    if current.right:
+        depth_first_search_preorder(tree, current.right, array)
+    return array
+
+
+def depth_first_search_postorder(tree, current=None, array=[]):
     if current is None:
         current = tree.root
     if current.left:
-        depth_first_search_postorder(tree, current.left, list)
+        depth_first_search_postorder(tree, current.left, array)
     if current.right:
-        depth_first_search_postorder(tree, current.right, list)
-    list.append(current.value)
-    return list
+        depth_first_search_postorder(tree, current.right, array)
+    array.append(current.value)
+    return array
 
 
 # -- Comment these out --
 
 # # Inserting values to the Binary Search Tree
-# bst = BinarySeachTree()
+# bst = BinarySearchTree()
 # bst.insert(9)
 # bst.insert(4)
 # bst.insert(6)

@@ -1,14 +1,6 @@
-import os
-import sys
-import random
-
-# Adds the data_structures directory to sys.path for easy importing
-cwd = os.getcwd()
-sys.path.append(cwd + "\data_structures")
-
-# Importing Binary Seach Tree which was previously implemented
-from Trees.binary_search_tree import BinarySeachTree
-from Queues.queue import Queue
+# Importing Binary Search Tree which was previously implemented
+from data_structures.Trees.binary_search_tree import BinarySearchTree
+from data_structures.Queues.queue import Queue
 
 
 # BreadthFirstSearch - searches a tree from the left to right (sideways).
@@ -34,6 +26,7 @@ def breadth_first_search(tree, value):
             queue.enqueue(current_node.right)
     return False
 
+
 def breadth_first_search_recursive(queue, value):
     # queue -> Queue() object with tree.root
     if queue.length <= 0:
@@ -51,7 +44,7 @@ def breadth_first_search_recursive(queue, value):
 # -- Comment these out --
 
 # # Inserting values to the Binary Search Tree
-# bst = BinarySeachTree()
+# bst = BinarySearchTree()
 # bst.insert(9)
 # bst.insert(4)
 # bst.insert(6)
@@ -71,7 +64,6 @@ def breadth_first_search_recursive(queue, value):
 #
 # print(breadth_first_search(bst, 20))
 # print(breadth_first_search(bst, 5))
-#
 #
 # queue1 = Queue()
 # queue1.enqueue(bst.root)

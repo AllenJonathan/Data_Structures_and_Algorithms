@@ -34,7 +34,7 @@ class Node:
         self.right = None
 
 
-class BinarySeachTree:
+class BinarySearchTree:
 
     def __init__(self):
         self.root = None
