@@ -17,3 +17,6 @@ Implementation and solutions of simple problems of popular data structures and a
   - Insertion Sort
   - Merge Sort
   - Quick Sort
+- Searching
+  - Depth-first search
+  - Breadth-first search
